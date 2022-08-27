@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="./src/time.js" defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <script src="./src/balls.js" defer></script>
+    <script src="./firebase.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <img src="./img/out.gif"  style='display: none;' alt="">
+    <img src="./img/p_1.png"  style='display: none;' alt="">
+    <img src="./img/p_2.png"  style='display: none;' alt="">
+    <img src="./img/p_3.png"  style='display: none;' alt="">
+    <img src="./img/p_4.png"  style='display: none;' alt="">
+    <img src="./img/p_5.png"  style='display: none;' alt="">
+    <img src="./img/p_6.png"  style='display: none;' alt="">
+    <img src="./img/p_7.png"  style='display: none;' alt="">
+    <title>Document</title>
+</head>
+<body>
+  <div id="startscreen">
+    <div id="player">
+      <span class="head">Player's Details</span>
+      <span class="detail">
+        <p>Player Name : Gourab</p>
+        <p>Score : 25</p>
+      </span>
+    </div>
+    <a href="#modal-opened" class="link-1" id="modal-closed">Play Now</a>
+<div class="modal-container" id="modal-opened">
+  <div class="modal">
+    <div class="modal__details">
+      <h1 class="modal__title">Welcome To The Outer Space</h1>
+      <p class="modal__description">Select The Game Mode<br>Lets get ready for journey</p>
+    </div>
+    <p class="modal__text">Give Your Name
+      <input type="text" id='playername' required>
+    </p>
+    <button class="modal__btn">Easy &rarr;</button>
+    <button class="modal__btn">Medium &rarr;</button>
+    <button class="modal__btn">Hard &rarr;</button>
+    <a href="#" class="link-2"></a>
+  </div>
+</div>
+  </div>
+    <text id="score"> 0 </text>
+    <text id="time"> 45 </text>
+    <div id="box"></div>
+    <div id='fire'></div>
+    <img src="./img/cocpit1.png" style="width:100%;height:100%">
+   <div id="endscreen">
+    <span id="over">Your 30 sec is over</span>
+    <text>
+      Thanks For Playing This Game.
+      <p>Bit Blits Digital WorkStation</p>
+    </text>
+    <span class="scorecard">
+      <p class="yourscore">Your Score : </p>
+      <p class="totalastroid">Total Asteroid Destroyed : </p>
+    </span>
+    <button onclick="location.reload()">Play Again</button>
+   </div>
+
+   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>  
+</body>
+</html>
