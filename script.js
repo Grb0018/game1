@@ -54,3 +54,7 @@ mode.forEach(element => {
         } 
     };
 });
+
+document.body.onload = () =>{
+document.getElementById('load').style.display = 'none'
+}
