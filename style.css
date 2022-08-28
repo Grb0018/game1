@@ -427,9 +427,7 @@ body{
     transform: scale(0.9);
 }
     .detail{
-        animation-delay: 1s;
-    position: absolute;
-    height: max-content;
+    padding: 0.5vw 4vw;
     font-size: 10px;
-    margin: 2vh;}    
+    }    
 }
