@@ -15,11 +15,13 @@ body{
 #load{
 display:flex;
 justify-content:center;
-align-item:center;
+align-items:center    
 position:absolute;
 z-index:2;
 top:0;
-background:black;    
+background:black;   
+width: 100vw;
+height: 100vh;
 }
 #box{
     cursor: url(./img/f.png) 4 0,move;
