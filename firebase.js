@@ -23,6 +23,7 @@
         })
     };
     function getdata(){
+        document.getElementById('player').innerHTML += `<span class="head">Loading ....</span>`;
         document.body.getElementsByClassName('link-2')[0].click();
     var leadsRef = firebase.database().ref();
     leadsRef.on('value', function(snapshot) {
@@ -37,10 +38,11 @@
     })
     });
 });
-document.getElementById('player').innerHTML ='';
-document.getElementById('player').innerHTML += `<span class="head">Player's Details</span>`;
+
 var intchk = setInterval(()=>{
     if(cc.length>0){
+        document.getElementById('player').innerHTML ='';
+        document.getElementById('player').innerHTML += `<span class="head">Player's Details</span>`;
         setTimeout(()=>{for (let i = 0; i < cc.length; i++) {
             document.getElementById('player').innerHTML += `
             <span class="detail">
