@@ -391,7 +391,7 @@ body{
     box-shadow: 3px 3px 2px #d3d3d326;
     position:relative;
     display:block;
-    top: 30vh;  
+    top: 40vh;  
     animation: up 4000ms linear infinite;  
   }
 @keyframes up {
