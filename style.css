@@ -365,8 +365,19 @@ body{
     border: 2px solid #361f36;
     border-radius: 6px;
     color: #a291b3;
-    max-height: 25vh;
+    max-height: 35vh;
+    padding-top: 0;
+    overflow: hidden;  
   }
+#player .head{
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(2px);
+    height: 5vh;
+    width: 100%;
+    text-align: -webkit-center;
+    background: #49187747;
+}
   .detail{
     font-size: 13px;
     margin: 10px;
@@ -376,7 +387,15 @@ body{
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
     box-shadow: 3px 3px 2px #d3d3d326;
+    position:relative;
+    display:block;
+    top: 30vh;  
+    animation: up 4000ms linear infinite;  
   }
+@keyframes up {
+    0%{top:40vh;}
+    100%{top:-10vh}
+}
   #endscreen button {
     width: 9vw;
     height: 4vw;
