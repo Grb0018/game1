@@ -427,7 +427,17 @@ body{
     transform: scale(0.9);
 }
     .detail{
-    padding: 0.5vw 4vw;
-    font-size: 10px;
+    padding: 0.2vw 4vw;
+    font-size: 2.3vh;
+    width: max-content;
+    left: 1vw;
+    margin-top: 2vh;
+    height: max-content;
     }    
+    .modal__details{
+    margin-bottom: 2vh;
+    padding-bottom: 6vh;
+    }
+    #player .head{
+        font-size: 3.5vh;}
 }
