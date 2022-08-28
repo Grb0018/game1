@@ -355,7 +355,7 @@ body{
     width: max-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding: 1.8vw 2.1vw;
     position: absolute;
     left: 10vw;
@@ -376,7 +376,8 @@ body{
     z-index: 1;
     backdrop-filter: blur(2px);
     height: 5vh;
-    width: 100%;
+    width: 123%;
+    left:-2vw;
     text-align: -webkit-center;
     background: #49187747;
 }
@@ -392,7 +393,7 @@ body{
     position:relative;
     display:block;
     top: 40vh;  
-    animation: up 4000ms linear infinite;  
+      
   }
 @keyframes up {
     0%{top:40vh;}
