@@ -414,6 +414,9 @@ body{
     border-radius: 1vw;
   }
 @media only screen and (max-width: 1020px) {
+    #box{
+    cursor: default;
+    }
 .modal{
     width: max-content;
     height: max-content;
