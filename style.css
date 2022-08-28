@@ -11,7 +11,16 @@ body{
     background-image: url(./bkg.gif);
     background-size: 100% 100%;
     animation: none;
-}  
+}
+#load{
+display:flex;
+justify-content:center;
+align-item:center;
+position:absolute;
+z-index:2;
+top:0;
+background:black;    
+}
 #box{
     cursor: url(./img/f.png) 4 0,move;
     left: 7.5vw;
