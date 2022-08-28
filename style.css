@@ -368,6 +368,8 @@ body{
     max-height: 35vh;
     padding-top: 0;
     overflow: hidden;  
+    width: 18vw;
+    height: 40vh;
   }
 #player .head{
     position: absolute;
