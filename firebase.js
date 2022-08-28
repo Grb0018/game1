@@ -45,7 +45,7 @@ var intchk = setInterval(()=>{
         document.getElementById('player').innerHTML += `<span class="head">Player's Details</span>`;
         setTimeout(()=>{for (let i = 0; i < cc.length; i++) {
             document.getElementById('player').innerHTML += `
-            <span class="detail" style="animation-delay:${i+1}s;position:absolute">
+            <span class="detail" style="animation-delay:${i+1}s;position:absolute;animation: up ${cc.length}000ms linear infinite;">
                 <p>Player Name : ${cc[i].name}</p>
                 <p>Score : ${cc[i].score}</p>
             </span>`
