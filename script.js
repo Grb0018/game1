@@ -58,10 +58,10 @@ mode.forEach(element => {
 document.body.onload = () =>{
 document.getElementById('load').style.display = 'none';
 if(navigator.userAgent.includes('Mobile')){
-    if(parseInt(screen.availWidth) < 520){
+    if(parseInt(screen.availWidth) < 450){
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-            if(parseInt(screen.availWidth)>400){
+            if(parseInt(screen.availWidth)>450){
                 location.reload();
                 clearInterval(sr)
             }
