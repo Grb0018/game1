@@ -74,16 +74,17 @@ const getUA = () => {
     Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
     return device;
 }
+var t = false;
 document.body.onload = () =>{
     alert('o')
 document.getElementById('load').style.display = 'none';
 if(navigator.userAgent.includes('Mobile')){
-    if(parseInt(screen.availWidth) < 500){
+    if(window.innerHeight > window.innerWidth){
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-            if(window.innerHeight < window.innerWidth){
+            if(window.innerHeight < window.innerWidth && t==false){
                 location.reload();
-                clearInterval(sr)
+                t=true;
             }
         },50)
     }
