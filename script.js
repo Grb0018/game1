@@ -74,6 +74,7 @@ const getUA = () => {
     Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
     return device;
 }
+var n=1;
 document.body.onload = () =>{
     alert('start checking')
     alert('Its a: ' + getUA());
@@ -84,6 +85,7 @@ if(navigator.userAgent.includes('Mobile')){
         alert('potrait')
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
+            alert(n++)
             if(parseInt(screen.availWidth)>480){
                 alert('landscape')
                 window.location.reload();
