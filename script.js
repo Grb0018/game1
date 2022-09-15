@@ -85,9 +85,9 @@ if(navigator.userAgent.includes('Mobile')){
         alert('potrait')
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-        alert(parseInt(screen.availWidth))    
+        alert('screen.orientation.angle') 
             if(screen.orientation.angle>0){
-                alert('landscape')
+                alert('screen.orientation.angle')
                 window.location.href='https://grb0018.github.io/game1';
                 clearInterval(sr)
             }
