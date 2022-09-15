@@ -86,7 +86,7 @@ if(navigator.userAgent.includes('Mobile')){
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
         alert(parseInt(screen.availWidth))    
-            if(parseInt(screen.availWidth)>480){
+            if(screen.orientation.angle>0){
                 alert('landscape')
                 window.location.href='https://grb0018.github.io/game1';
                 clearInterval(sr)
