@@ -74,30 +74,26 @@ const getUA = () => {
     Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
     return device;
 }
-var n=1;
 document.body.onload = () =>{
-    alert('start checking')
-    alert('Its a: ' + getUA());
+    alert('o')
 document.getElementById('load').style.display = 'none';
 if(navigator.userAgent.includes('Mobile')){
-    alert('Mobile detected')
-    if(parseInt(screen.availWidth) < 480){
-        alert('potrait')
+    if(parseInt(screen.availWidth) < 500){
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-        alert('screen.orientation.angle') 
-            if(screen.orientation.angle>0){
-                alert('screen.orientation.angle')
-                window.location.href='https://grb0018.github.io/game1';
+            if(window.innerHeight < window.innerWidth){
+                location.reload();
                 clearInterval(sr)
             }
-        },2050)
+        },50)
     }
 }
 else{
     $('#short').hide();
 }
 }
+
+
 document.getElementsByClassName('link-1')[0].onclick = ()=>{
     var audio = new Audio('./img/beyond.mp3');
     audio.play();
