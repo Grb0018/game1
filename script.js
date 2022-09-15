@@ -74,7 +74,7 @@ const getUA = () => {
     Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
     return device;
 }
-var t = false;
+var orio = false;
 document.body.onload = () =>{
     alert('o')
 document.getElementById('load').style.display = 'none';
@@ -82,9 +82,10 @@ if(navigator.userAgent.includes('Mobile')){
     if(window.innerHeight > window.innerWidth){
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-            if(window.innerHeight < window.innerWidth && t==false){
+            if(window.innerHeight < window.innerWidth && orio==false){
                 location.reload();
-                t=true;
+                orio=true;
+                $('.all').css({animation: 'none'})
             }
         },50)
     }
