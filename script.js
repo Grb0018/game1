@@ -91,7 +91,7 @@ if(navigator.userAgent.includes('Mobile')){
                 window.open(window.location.href)
                 clearInterval(sr)
             }
-        },50)
+        },2050)
     }
 }
 else{
