@@ -62,7 +62,7 @@ if(navigator.userAgent.includes('Mobile')){
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
             if(parseInt(screen.availWidth)>450){
-                location.reload(true);
+                window.location.reload();
                 clearInterval(sr)
             }
         },50)
