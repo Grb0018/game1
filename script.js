@@ -85,10 +85,9 @@ if(navigator.userAgent.includes('Mobile')){
         alert('potrait')
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-            alert(n++)
             if(parseInt(screen.availWidth)>480){
                 alert('landscape')
-                window.location.reload();
+                window.open(window.location.href)
                 clearInterval(sr)
             }
         },50)
