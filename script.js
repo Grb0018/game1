@@ -76,7 +76,6 @@ const getUA = () => {
 }
 var orio = false;
 document.body.onload = () =>{
-    alert('o')
 document.getElementById('load').style.display = 'none';
 if(navigator.userAgent.includes('Mobile')){
     if(window.innerHeight > window.innerWidth){
