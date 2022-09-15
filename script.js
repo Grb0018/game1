@@ -54,14 +54,38 @@ mode.forEach(element => {
         } 
     };
 });
-
+const getUA = () => {
+    let device = "Unknown";
+    const ua = {
+        "Generic Linux": /Linux/i,
+        "Android": /Android/i,
+        "BlackBerry": /BlackBerry/i,
+        "Bluebird": /EF500/i,
+        "Chrome OS": /CrOS/i,
+        "Datalogic": /DL-AXIS/i,
+        "Honeywell": /CT50/i,
+        "iPad": /iPad/i,
+        "iPhone": /iPhone/i,
+        "iPod": /iPod/i,
+        "macOS": /Macintosh/i,
+        "Windows": /IEMobile|Windows/i,
+        "Zebra": /TC70|TC55/i,
+    }
+    Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
+    return device;
+}
 document.body.onload = () =>{
+    alert('start checking')
+    alert('Its a: ' + getUA());
 document.getElementById('load').style.display = 'none';
 if(navigator.userAgent.includes('Mobile')){
-    if(parseInt(screen.availWidth) < 450){
+    alert('Mobile detected')
+    if(parseInt(screen.availWidth) < 480){
+        alert('potrait')
         $('#short').css({display: 'flex'});
         var sr = setInterval(()=>{
-            if(parseInt(screen.availWidth)>450){
+            if(parseInt(screen.availWidth)>480){
+                alert('landscape')
                 window.location.reload();
                 clearInterval(sr)
             }
